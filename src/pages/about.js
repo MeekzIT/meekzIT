@@ -71,7 +71,7 @@ const About = () => {
                         <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:col-span-8 md:order-2">
                             <p className="text-justify font-medium indent-10">
                                 Innovative Solutions: MeekzIT stands out for its commitment to
-                                pushing the boundaries of what's possible. We design and implement
+                                pushing the boundaries of whats possible. We design and implement
                                 bespoke IoT solutions tailored to the unique needs of our clients,
                                 ensuring they stay ahead in an ever-evolving digital landscape.
                             </p>
@@ -84,7 +84,7 @@ const About = () => {
                             <p className="text-justify font-medium indent-10">
                                 End-to-End Capabilities: MeekzIT offers a comprehensive suite of
                                 services, encompassing software, hardware, and engineering chips.
-                                Whether it's developing cutting-edge software applications,
+                                Whether its developing cutting-edge software applications,
                                 designing innovative hardware solutions, or engineering
                                 next-generation chips, we have the expertise to bring your IoT
                                 vision to life.
