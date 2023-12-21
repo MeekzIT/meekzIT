@@ -1,29 +1,24 @@
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Image from 'next/image'
-import profilePic from './../img/dream_developer.png'
-import AnimatedText from '../components/AnimatedText'
-import Link from 'next/link'
-import { LinkArrow } from '../components/Icons'
-import { useRouter } from 'next/router'
-import HireMe from '../components/HireMe'
-import TransitionEffect from '../components/TransitionEffect'
+import Head from "next/head";
+import Layout from "../components/Layout";
+import Image from "next/image";
+import profilePic from "./../img/dream_developer.png";
+import logoPic from "./../img/studio_meekzIt.png";
+import AnimatedText from "../components/AnimatedText";
+import Link from "next/link";
+import { LinkArrow } from "../components/Icons";
+import { useRouter } from "next/router";
+import HireMe from "../components/HireMe";
+import TransitionEffect from "../components/TransitionEffect";
 
 export default function Home() {
-    const router = useRouter()
+    const router = useRouter();
     return (
         <>
             <Head>
                 <title>Meekz IT company</title>
-                <meta
-                    name="description"
-                    content="test"
-                />
+                <meta name="description" content="test" />
                 <meta property="og:title" content="test" />
-                <meta
-                    property="og:description"
-                    content="test"
-                />
+                <meta property="og:description" content="test" />
             </Head>
             <TransitionEffect />
             <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
@@ -31,7 +26,7 @@ export default function Home() {
                     <div className="flex items-center justify-between w-full lg:flex-col">
                         <div className="w-1/2">
                             <Image
-                                src={profilePic}
+                                src={logoPic}
                                 alt="Meekz IT"
                                 className="w-auto h-auto m-auto rounded-full shadow-2xl lg:inline-block lg:w-full"
                                 priority
@@ -40,34 +35,25 @@ export default function Home() {
                         </div>
                         <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
                             <AnimatedText
-                                text="Hello, we are Meekz IT company"
+                                text="We are MeekzIT"
                                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
                             />
                             <p className="my-4 text-base font-medium indent-10 text-justify md:text-sm sm:text-xs">
-                                Our Description bla bla bla ... Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                MeekzIT is not just a technology company; we are architects of
+                                intelligent ecosystems. Our team of visionaries, engineers, and
+                                innovators collaborates to design and implement IoT solutions that
+                                transcend boundaries. With a passion for transforming data into
+                                actionable insights, we empower businesses and individuals to
+                                harness the full potential of connected devices.
                             </p>
                             <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link
-                                    href="/resume.pdf"
+                                    href="meekzitmedia@gmail.com"
                                     target="_blank"
                                     className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
-                                    download={true}
-                                >
-                                    CV <LinkArrow className={"w-6 ml-1"} />
-                                </Link>
-                                <Link
-                                    href="meekzitmedia@gmail.com"
-                                    className="relative group ml-4 text-lg font-medium capitalize text-dark dark:text-light md:text-base"
+                                    // download={true}
                                 >
                                     Contact
-                                    <span
-                                        className={`h-[2px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-                                            router.asPath === "meekzitmedia@gmail.com"
-                                                ? "w-full"
-                                                : "w-0"
-                                        }`}
-                                    ></span>
                                 </Link>
                             </div>
                         </div>

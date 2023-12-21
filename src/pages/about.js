@@ -1,32 +1,32 @@
-import Head from 'next/head'
-import AnimatedText from '../components/AnimatedText'
-import Layout from '../components/Layout'
-import Image from 'next/image'
-import ProfilePicture from '../img/studio_meekzIt.png'
-import { useEffect, useRef } from 'react'
-import { useInView, useMotionValue, useSpring } from 'framer-motion'
-import Skills from '../components/Skills'
-import Experience from '../components/Experience'
-import Education from '../components/Education'
-import { projects } from '../components/data/Projects'
-import TransitionEffect from '../components/TransitionEffect'
+import Head from "next/head";
+import AnimatedText from "../components/AnimatedText";
+import Layout from "../components/Layout";
+import Image from "next/image";
+import ProfilePicture from "../img/studio_meekzIt.png";
+import { useEffect, useRef } from "react";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
+import Skills from "../components/Skills";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
+import { projects } from "../components/data/Projects";
+import TransitionEffect from "../components/TransitionEffect";
 
 const AnimatedNumbers = ({ value }) => {
-    const ref = useRef(null)
-    const motionValue = useMotionValue(0)
-    const springValue = useSpring(motionValue, { duration: 3000 })
-    const isInView = useInView(ref, { once: true })
+    const ref = useRef(null);
+    const motionValue = useMotionValue(0);
+    const springValue = useSpring(motionValue, { duration: 3000 });
+    const isInView = useInView(ref, { once: true });
 
     useEffect(() => {
         if (isInView) {
-            motionValue.set(value)
+            motionValue.set(value);
         }
-    }, [isInView, value, motionValue])
+    }, [isInView, value, motionValue]);
 
     useEffect(() => {
         springValue.on("change", (latest) => {
             if (ref.current && latest.toFixed(0) <= value) {
-                ref.current.textContent = latest.toFixed(0)
+                ref.current.textContent = latest.toFixed(0);
             }
         });
     }, [springValue, value]);
@@ -34,21 +34,21 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const experienceYears = () => {
-    const currentYear = new Date().getFullYear()
-    const experienceYears = currentYear - 2019
-    return experienceYears
+    const currentYear = new Date().getFullYear();
+    const experienceYears = currentYear - 2019;
+    return experienceYears;
 };
 
 const projectsNumber = (collaboration) => {
-    var number = 0
+    var number = 0;
     var projects = collaboration.map(function (project) {
-        number += project.projects.length
+        number += project.projects.length;
     });
-    return number
+    return number;
 };
 
 const collaborationNumber = (collaboration) => {
-    return collaboration.length
+    return collaboration.length;
 };
 
 const About = () => {
@@ -56,15 +56,9 @@ const About = () => {
         <>
             <Head>
                 <title>About Our Company</title>
-                <meta
-                    name="description"
-                    content="About Our Company"
-                />
+                <meta name="description" content="About Our Company" />
                 <meta property="og:title" content="About Our Company" />
-                <meta
-                    property="og:description"
-                    content="About Our Company"
-                />
+                <meta property="og:description" content="About Our Company" />
             </Head>
             <TransitionEffect />
             <main className="flex w-full flex-col items-center justify-center dark:text-light">
@@ -76,30 +70,49 @@ const About = () => {
                     <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
                         <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:col-span-8 md:order-2">
                             <p className="text-justify font-medium indent-10">
-                                Je suis un développeur web avec une formation initiale scientifique.
-                                Mon parcours académique m&apos;a permis d&apos;acquérir des
-                                compétences telles que la recherche d&apos;information, de solutions
-                                et la curiosité, que j&apos;ai ensuite transposées au développement
-                                web.
+                                Innovative Solutions: MeekzIT stands out for its commitment to
+                                pushing the boundaries of what's possible. We design and implement
+                                bespoke IoT solutions tailored to the unique needs of our clients,
+                                ensuring they stay ahead in an ever-evolving digital landscape.
                             </p>
                             <p className="text-justify font-medium indent-10 my-4">
-                                Au fil de mes {experienceYears()} années d&apos;expérience dans
-                                l&apos;écosystème SFCC, j&apos;ai acquis de solides compétences
-                                techniques et une capacité à répondre rapidement et efficacement aux
-                                problématiques, ce qui m&apos;a permis de contribuer
-                                significativement aux projets auxquels j&apos;ai participé.
-                                J&apos;ai obtenu la certification &quot;Salesforce B2C Commerce
-                                Developer&quot; qui atteste de mes compétences à gérer la
-                                configuration / contribution du Business Manager ainsi que le code
-                                sous-jacent.
+                                Reliability and Security: Security is at the core of everything we
+                                do. Our robust IoT platforms prioritize data integrity and privacy,
+                                providing our clients with a secure foundation for their connected
+                                devices.
                             </p>
                             <p className="text-justify font-medium indent-10">
-                                Pour être plus polyvalent et efficace, j&apos;ai également suivi des
-                                formations et appris de nouvelles technologies telles que React,
-                                Next.js ou encore TailwindCSS. N&apos;hésitez pas à consulter mes
-                                différents projets!
+                                End-to-End Capabilities: MeekzIT offers a comprehensive suite of
+                                services, encompassing software, hardware, and engineering chips.
+                                Whether it's developing cutting-edge software applications,
+                                designing innovative hardware solutions, or engineering
+                                next-generation chips, we have the expertise to bring your IoT
+                                vision to life.
+                            </p>
+                            <p className="text-justify font-medium indent-10">
+                                Scalability: MeekzIT understands the importance of scalability in
+                                the digital age. Our solutions are designed to grow seamlessly with
+                                your business, ensuring that you are always equipped to meet the
+                                demands of the future.
+                            </p>
+                            <p className="text-justify font-medium indent-10">
+                                End-to-End IoT Solutions: From concept to deployment, MeekzIT offers
+                                comprehensive IoT solutions that streamline processes, enhance
+                                efficiency, and drive innovation.
+                            </p>
+                            <p className="text-justify font-medium indent-10 my-4">
+                                Custom Development: We understand that every business is unique. Our
+                                team crafts custom IoT applications and platforms to meet the
+                                specific needs and goals of our clients.
+                            </p>
+                            <p className="text-justify font-medium indent-10">
+                                Consulting and Integration: Leveraging our expertise, we provide
+                                strategic consulting to help businesses integrate IoT seamlessly
+                                into their operations, unlocking new possibilities and driving
+                                sustainable growth.
                             </p>
                         </div>
+
                         <div className="hidden md:block" />
                         <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:col-span-6 md:order-1">
                             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[102%] rounded-[2rem] bg-dark dark:bg-light" />
@@ -111,7 +124,8 @@ const About = () => {
                                 sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
                             />
                         </div>
-                        <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
+
+                        {/* <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
                             <div className="flex flex-col items-end justify-center xl:items-center">
                                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5l xs:text-4xl">
                                     <AnimatedNumbers
@@ -140,14 +154,15 @@ const About = () => {
                                     Années d&apos;experience
                                 </h2>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
+
                     <Skills />
-                    <Experience />
-                    <Education />
+                    {/* <Experience /> */}
+                    {/* <Education />  */}
                 </Layout>
             </main>
         </>
     );
 };
-export default About
+export default About;

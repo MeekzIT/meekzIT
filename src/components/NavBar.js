@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import Logo from './Logo'
-import { useRouter } from 'next/router'
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from './Icons'
-import { motion } from 'framer-motion'
-import useThemeSwitcher from './hooks/useThemeSwitcher'
-import { useState } from 'react'
+import Link from "next/link";
+import Logo from "./Logo";
+import { useRouter } from "next/router";
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons";
+import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import { useState } from "react";
 
 const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
@@ -27,8 +27,8 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
     const router = useRouter();
 
     const handleClick = () => {
-        toggle()
-        router.push(href)
+        toggle();
+        router.push(href);
     };
 
     return (
@@ -88,7 +88,7 @@ const NavBar = () => {
 
                 <nav className="flex items-center justify-center flex-wrap">
                     <motion.a
-                        href='www.linkedin.com/in/meekz-it'
+                        href="www.linkedin.com/in/meekz-it"
                         target="_blank"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
@@ -97,7 +97,7 @@ const NavBar = () => {
                         <LinkedInIcon />
                     </motion.a>
                     <motion.a
-                        href='https://github.com/MeekzIT'
+                        href="https://github.com/MeekzIT"
                         target="_blank"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
@@ -182,11 +182,9 @@ const NavBar = () => {
                 </motion.div>
             ) : null}
 
-            <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-                <Logo />
-            </div>
+            <div className="absolute left-[50%] top-2 translate-x-[-50%]"></div>
         </header>
     );
 };
 
-export default NavBar
+export default NavBar;

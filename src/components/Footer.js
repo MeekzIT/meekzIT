@@ -1,5 +1,5 @@
-import Layout from './Layout'
-import Technologies from './Technologies'
+import Layout from "./Layout";
+import Technologies from "./Technologies";
 
 const Footer = () => {
     return (
@@ -7,15 +7,11 @@ const Footer = () => {
             <Layout className="py-8 md:ps-0 flex items-center justify-evenly xs:flex-col lg:py-6 lg:ps-40 xl:ps-60">
                 <div className="xs:mb-3">
                     <div className="">
-                        Build with{" "}
-                        <span className="text-primary dark:text-primaryDark text-2xl px-1">
-                            &#9825;
-                        </span>{" "}
-                        by&nbsp;
+                        Build with by&nbsp;
                         <span className="underline underline-offset-2">Meekz IT</span>
                     </div>
                     <div className="w-full flex justify-between mx-auto">
-                        <Technologies tech1="#nextJS" tech2="#tailwindcss" tech3="#framer-motion" />
+                        <Technologies tech1="meekzitmedia@gmail.com" />
                     </div>
                 </div>
                 <div className="xs:mt-3">

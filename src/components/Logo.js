@@ -6,7 +6,7 @@ const MotionLink = motion(Link);
 const Logo = () => {
     return (
         <div className="flex items-center justify-center mt-2">
-            <MotionLink
+            {/* <MotionLink
                 href="/"
                 className="w-16 h-16 bg-dark text-light flex items-center justify-center rounded-full text-2xl font-bold border border-solid border-transparent dark:border-light "
                 whileHover={{
@@ -23,7 +23,7 @@ const Logo = () => {
                 whileTap={{ scale: 1.5 }}
             >
                 AR
-            </MotionLink>
+            </MotionLink> */}
         </div>
     );
 };
