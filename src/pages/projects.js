@@ -1,13 +1,13 @@
-import AnimatedText from '../components/AnimatedText'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Link from 'next/link'
-import Image from 'next/image'
-import { GithubIcon } from '../components/Icons'
-import { motion } from 'framer-motion'
-import { projects } from '../components/data/Projects'
-import Technologies from '../components/Technologies'
-import TransitionEffect from '../components/TransitionEffect'
+import AnimatedText from "../components/AnimatedText";
+import Head from "next/head";
+import Layout from "../components/Layout";
+import Link from "next/link";
+import Image from "next/image";
+import { GithubIcon } from "../components/Icons";
+import { motion } from "framer-motion";
+import { projects } from "../components/data/Projects";
+import Technologies from "../components/Technologies";
+import TransitionEffect from "../components/TransitionEffect";
 
 const DisplayProjects = () => {
     const personalProjects = projects.personnalProjects;
@@ -88,9 +88,6 @@ const FeaturedProject = ({ title, summary, img, link, github, technologies }) =>
                         <Technologies tech1={tech1} tech2={tech2} tech3={tech3} />
                     </div>
                     <div className="mt-5 flex items-center">
-                        <Link href={github} target="_blank" className="w-10">
-                            <GithubIcon />
-                        </Link>
                         <Link
                             href={link}
                             target="_blank"

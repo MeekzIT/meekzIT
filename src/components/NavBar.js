@@ -88,7 +88,7 @@ const NavBar = () => {
 
                 <nav className="flex items-center justify-center flex-wrap">
                     <motion.a
-                        href="www.linkedin.com/in/meekz-it"
+                        href="https://www.linkedin.com/in/vahe-mkrtchyan-57446b205/"
                         target="_blank"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
@@ -96,15 +96,10 @@ const NavBar = () => {
                     >
                         <LinkedInIcon />
                     </motion.a>
-                    <motion.a
-                        href="https://github.com/MeekzIT"
-                        target="_blank"
-                        whileHover={{ y: -2 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="w-6 mx-3"
-                    >
-                        <GithubIcon />
-                    </motion.a>
+
+                    <a href="/MkrtchyanVahe.pdf" download>
+                        View CV
+                    </a>
                     <button
                         className={`w-6 mx-3 flex items-center justify-center rounded-full p-1 ${
                             mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
